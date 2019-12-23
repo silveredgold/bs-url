@@ -1,0 +1,31 @@
+{
+  "name": "bs-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/cli.js",
+  "bin": {
+    "bs-url": "./lib/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/cli.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "silveredgold",
+  "license": "MIT",
+  "dependencies": {
+    "beautiful-dom": "^1.0.7",
+    "clime": "^0.5.10",
+    "cross-fetch": "^3.0.4",
+    "jsdom": "^15.2.1"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^12.2.4",
+    "@types/node": "^12.12.21",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.4"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "lib": [
+            "es6",
+            "es2015",
+            "dom"
+        ],
+        "declaration": true,
+        "outDir": "lib",
+        "rootDir": "src",
+        "strict": true,
+        "types": [
+            "node"
+        ],
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "strictPropertyInitialization": false,
+        "sourceMap": true
+    }
+}
