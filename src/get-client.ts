@@ -3,6 +3,7 @@ export const enum Client {
     youtubeDl = "youtube-dl"
 }
 
+
 export function getExecutableName(client: Client) {
     var exeType = process.platform === 'win32' ? ".exe" : "";
     return `${client}${exeType}`;

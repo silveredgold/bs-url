@@ -30,19 +30,18 @@ export default class extends Command {
           options: WgetOptions
     ): Promise<Promise<any> | any> {
         var outputArgs: string = "";
-        let pageUrl = new URL(postUrl);
-        var client = new HtmlClient(pageUrl);
-        var src = client.getVideoSource();
+        var client = new HtmlClient(new URL(postUrl));
+        var src = await client.getVideoSource();
         if (src == null) {
             return "";
         }
         if (options?.autoFileName) {
-            let fileName = pageUrl.pathname.split('/').pop();
+            let fileName = (src || client.url.pathname).split('/').pop();
             outputArgs = `-O "${fileName}`;
         }
         else if (options?.outputFile) {
             outputArgs = `-O ${options.outputFile}`;
         }
-        return `${getExecutableName(Client.wget)} --referer "${postUrl}" "${src}" ${outputArgs}`;
+        return `${getExecutableName(Client.wget)} --referer "${client.url.href}" "${src}" ${outputArgs}`;
     }
 }
