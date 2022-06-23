@@ -17,7 +17,7 @@
     "beautiful-dom": "^1.0.7",
     "clime": "^0.5.10",
     "cross-fetch": "^3.0.4",
-    "jsdom": "^15.2.1"
+    "jsdom": "^16.5.0"
   },
   "devDependencies": {
     "@types/jsdom": "^12.2.4",
